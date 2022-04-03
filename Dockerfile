@@ -35,7 +35,9 @@ RUN python3 -m pip install --no-cache --upgrade pip && \
     dnspython==2.2.1
 
 # install relevant ansible collections
+COPY collections/* /tmp/collections/
 RUN ansible-galaxy collection install \
     \
-    kubernetes.core:==2.3.0 \
-    community.docker:==2.2.1
+    kubernetes.core:==2.2.3 \
+    community.docker:==2.2.1 \
+    /tmp/collections/*
