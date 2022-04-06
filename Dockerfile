@@ -32,7 +32,9 @@ RUN python3 -m pip install --no-cache --upgrade pip && \
     shtab==1.3.4 \
     passlib==1.7.4 \
     bcrypt==3.2.0 \
-    dnspython==2.2.1
+    dnspython==2.2.1 \
+    boto3==1.21.34 \
+    botocore==1.24.34
 
 # install relevant ansible collections
 COPY collections/* /tmp/collections/
