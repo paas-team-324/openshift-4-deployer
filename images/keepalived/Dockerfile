@@ -13,4 +13,5 @@ RUN subscription-manager register --username ${SM_USER} --password ${SM_PASSWORD
     \
     && yum clean all && subscription-manager unsubscribe --all && subscription-manager unregister && rm -rf /var/cache/yum /etc/yum.repos.d/*
 
-# TODO entrypoint and cmd
+ENTRYPOINT [ "keepalived" ]
+CMD [ "--log-console", "--log-detail", "--vrrp", "--dont-fork" ]
