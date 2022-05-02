@@ -15,6 +15,7 @@ RUN subscription-manager register --username ${SM_USER} --password ${SM_PASSWORD
     \
     && yum clean all && subscription-manager unsubscribe --all && subscription-manager unregister && rm -rf /var/cache/yum /etc/yum.repos.d/*
 
+# keepalived check will be run by a nonroot user
 RUN useradd keepalived_script
 
 ENTRYPOINT [ "keepalived" ]
