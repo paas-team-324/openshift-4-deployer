@@ -18,6 +18,7 @@ RUN subscription-manager register --username ${SM_USER} --password ${SM_PASSWORD
     openssh-clients-7.4p1 \
     sshpass-1.06 \
     rsync-3.1.2 \
+    httpd-tools-2.4.6 \
     \
     && yum remove -y epel-release \
     && yum clean all && subscription-manager unsubscribe --all && subscription-manager unregister && rm -rf /var/cache/yum
